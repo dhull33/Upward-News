@@ -72,14 +72,13 @@ class App extends Component {
             return (
                 <div>
                     <SearchNewsBar/>
-
-                    <ul>
                         {headLines.map(headLines => (
-                            <li key={headLines.title}>
-                                {headLines.title}
-                            </li>
+                            <div>
+                                <h3 key={headLines.title}>{headLines.title}</h3>
+                                <img className="headLineImg" src={headLines.urlToImage} />
+                            </div>
+
                         ))}
-                    </ul>
                 </div>
             );
         }

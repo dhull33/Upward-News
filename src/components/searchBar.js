@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Button, Label, Input, Navbar, NavbarBrand } from 'reactstrap';
 
 export default class SearchNewsBar extends Component {
     render(){
         return(
-            <Form inline>
-                    <Label for="SearchNews" hidden>Search</Label>
+            <div>
+                <Navbar expand="md">
                     <Input type="searchNews" name="searchNews" id="SearchNews" placeholder="Search for News"/>
-                {''}
-                <Button>Submit</Button>
+                    {''}
+                    <Button>Submit</Button>
+                </Navbar>
 
-            </Form>
+            </div>
 
         );
     }
