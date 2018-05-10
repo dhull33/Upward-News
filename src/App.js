@@ -8,7 +8,8 @@ class App extends Component {
         this.state = {
             error: null,
             isLoaded: false,
-            articles: []
+            articles: [],
+            stockNews: []
         };
     }
 
@@ -22,9 +23,41 @@ class App extends Component {
                         }, function(){
                             console.log(this.state);
                         });
+                    },
+                    (error) => {
+                        this.setState({
+                            isLoaded: true,
+                            error
+                        });
+                    });
+    };
 
-                    }
-                    )
+    getFinancialNews(){
+        fetch("https://api.iextrading.com/1.0/stock/market/news/10")
+            .then(res => res.json())
+            .then((data) => {
+                this.setState({
+                    isLoaded: true,
+                    stockNews: data
+                }, function(){
+                    console.log(data);
+                })
+            },
+            (error) => {
+                this.setState({
+                    isLoaded: true,
+                    error
+                })
+            })
+    };
+
+    componentWillMount(){
+        this.getHeadLineNews();
+
+    }
+
+    componentDidMount(){
+        this.getFinancialNews();
     }
 
 
