@@ -3,3 +3,9 @@ body {
   padding:0;
   font-family: sans-serif;
 }
+
+.searchForNews{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}

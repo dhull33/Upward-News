@@ -29,6 +29,18 @@
   max-width: 300px;
 }
 
-#SearchNews{
+#UpwardMarkets{
+  display: flex;
+  justify-content: center;
+}
+
+.whiteBackground{
+  /*!important overrides the default method for the Jumbotron*/
+  background-color: white !important;
+}
+
+.SearchNews{
+  display: flex;
+  justify-content: flex-end !important;
 
 }

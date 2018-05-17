@@ -2,13 +2,15 @@ import React, { Component } from 'react'
 // import { connect } from "react-redux";
 import './App.css'
 import SearchNewsBar from './components/searchBar'
+import Header from './components/header'
+import { Button } from 'reactstrap';
 
 const fetch = window.fetch
 
-const App = () => {
+class App extends Component {
   constructor (props) {
     super(props)
-
+    this.newsAPIKey = '32fafd1455b44c1dbfb0924c66fc1206'
     this.state = {
       error: null,
       isLoaded: false,
@@ -23,7 +25,24 @@ const App = () => {
       '&apiKey=' + this.newsAPIKey
   }
 
-
+  getHeadLineNews () {
+    fetch(this.buildNewsAPI())
+      .then(res => res.json())
+      .then((data) => {
+        this.setState({
+          isLoaded: true,
+          headLines: data.articles
+        }, function () {
+          console.log(this.state)
+        })
+      },
+      (error) => {
+        this.setState({
+          isLoaded: true,
+          error
+        })
+      })
+  };
 
   getFinancialNews () {
     fetch('https://api.iextrading.com/1.0/stock/market/news/last/20')
@@ -45,11 +64,11 @@ const App = () => {
   };
 
   componentWillMount () {
-    this.getHeadLineNews()
   }
 
   componentDidMount () {
     this.getFinancialNews()
+    this.getHeadLineNews()
   }
 
   render () {
@@ -63,11 +82,12 @@ const App = () => {
 
     return (
       <div>
+        {/*<Header />*/}
         <SearchNewsBar />
         {headLines.map(headLines => (
           <div>
             <h3 key={headLines.title}>{headLines.title}</h3>
-            <img className='headLineImg' src={headLines.urlToImage} />
+            <img className='headLineImg' src={headLines.urlToImage} alt={this.props} />
           </div>
         ))}
       </div>
