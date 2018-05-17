@@ -23,9 +23,7 @@ class SearchNewsBar extends Component {
         <Navbar expand='md' className='SearchNews' >
           <NavbarBrand href='/'><h1>Upward Markets</h1></NavbarBrand>
           <span>
-            <div>
             <Input type='searchNews' name='searchNews'  placeholder='Search for News'/>
-            </div>
           </span>
           <Button>Submit</Button>
         </Navbar>

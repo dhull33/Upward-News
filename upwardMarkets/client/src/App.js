@@ -3,13 +3,14 @@ import React, { Component } from "react";
 import "./App.css";
 import SearchNewsBar from "./components/searchBar";
 import Header from "./components/header";
+import HeadLine from "./components/headLine";
 import { Button } from "reactstrap";
 
 const fetch = window.fetch;
 
 class App extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.newsAPIKey = "32fafd1455b44c1dbfb0924c66fc1206";
     this.state = {
       error: null,
@@ -96,6 +97,7 @@ class App extends Component {
       <div>
         {/*<Header />*/}
         <SearchNewsBar />
+        <HeadLine mainHeadLine = {this.state.headLines}/>
         {headLines.map(headLines => (
           <div>
             <h3 key={headLines.title}>{headLines.title}</h3>

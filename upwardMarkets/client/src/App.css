@@ -42,5 +42,11 @@
 .SearchNews{
   display: flex;
   justify-content: flex-end !important;
+  text-align: center;
+}
 
+.upwardMarks{
+  display: flex;
+  justify-content: center !important;
+  text-align: center;
 }
