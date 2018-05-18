@@ -6,6 +6,7 @@ import Header from "./components/header";
 import HeadLine from "./components/headLine"
 import { Button } from "reactstrap"
 import getMainHeadLine from './utils/getHeadLineNews'
+import MarketNews from './components/MarketNews'
 
 const fetch = window.fetch;
 
@@ -25,7 +26,7 @@ class App extends Component {
   buildNewsAPI() {
     return (
       "https://newsapi.org/v2/top-headlines?" +
-      "country=us" + '&pageSize=1' +
+      "country=us" + '&category=business' +
       "&apiKey=" +
       this.newsAPIKey
     );
@@ -102,16 +103,7 @@ class App extends Component {
         {/*<Header />*/}
         <SearchNewsBar />
         <HeadLine headLine = {this.state.topHeadLine}/>
-        {headLines.map(headLines => (
-          <div>
-            <h3 key={headLines.title}>{headLines.title}</h3>
-            <img
-              className="headLineImg"
-              src={headLines.urlToImage}
-              alt={this.props}
-            />
-          </div>
-        ))}
+        <MarketNews markNews = {this.state.headLines} />
       </div>
     );
   }
