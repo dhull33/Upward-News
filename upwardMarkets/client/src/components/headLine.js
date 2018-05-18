@@ -1,38 +1,34 @@
 
-import { Media } from 'reactstrap'
-import PropTypes from 'prop-types'
+import { Media, Container, Row, Col } from 'reactstrap'
+// import PropTypes from 'prop-types'
 import React, { Component } from 'react';
 
-const HeadLine = () => {
-      return(
-      <Media>
-        <Media left href="#">
-          <Media object data-src={this.props.mainHeadLine.urlToImage} alt="Headline News" />
-        </Media>
-        <Media body>
-          <Media heading>
-            {this.props.mainHeadLine.title}
-          </Media>
-          {this.props.mainHeadLine.description}
-        </Media>
-      </Media>
-      )
+class HeadLine extends Component {
+  render() {
 
+    return (
+      <Container>
+        <Row>
+          <Col lg='auto'>
+            <Media>
+              <Media left href={this.props.headLine.urlToImage}>
+                <Media object className='resizeHeadLine' src={this.props.headLine.urlToImage} alt="Headline News"/>
+              </Media>
+
+              <Media body>
+                <Media heading className='Heading'>
+                  {this.props.headLine.title}
+                </Media>
+                <div className='dottedLine'></div>
+                {this.props.headLine.description}
+              </Media>
+            </Media>
+          </Col>
+        </Row>
+      </Container>
+    )
+  }
 }
-Media.PropTypes = {
-  body: PropTypes.bool,
-  bottom: PropTypes.bool,
-  children: PropTypes.node,
-  className: PropTypes.string,
-  heading: PropTypes.bool,
-  left: PropTypes.bool,
-  list: PropTypes.bool,
-  middle: PropTypes.bool,
-  object: PropTypes.bool,
-  right: PropTypes.bool,
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  top: PropTypes.bool,
-};
 
 
 export default HeadLine;

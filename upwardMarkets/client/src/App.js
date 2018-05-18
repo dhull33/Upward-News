@@ -1,10 +1,11 @@
-import React, { Component } from "react";
+import React, { Component } from "react"
 // import { connect } from "react-redux";
-import "./App.css";
-import SearchNewsBar from "./components/searchBar";
+import "./App.css"
+import SearchNewsBar from "./components/searchBar"
 import Header from "./components/header";
-import HeadLine from "./components/headLine";
-import { Button } from "reactstrap";
+import HeadLine from "./components/headLine"
+import { Button } from "reactstrap"
+import getMainHeadLine from './utils/getHeadLineNews'
 
 const fetch = window.fetch;
 
@@ -16,14 +17,15 @@ class App extends Component {
       error: null,
       isLoaded: false,
       headLines: [],
-      marketNews: []
+      marketNews: [],
+      topHeadLine: []
     };
   }
 
   buildNewsAPI() {
     return (
       "https://newsapi.org/v2/top-headlines?" +
-      "country=us" +
+      "country=us" + '&pageSize=1' +
       "&apiKey=" +
       this.newsAPIKey
     );
@@ -37,7 +39,8 @@ class App extends Component {
           this.setState(
             {
               isLoaded: true,
-              headLines: data.articles
+              headLines: data.articles,
+              topHeadLine: data.articles[0]
             },
             function() {
               console.log(this.state);
@@ -77,11 +80,12 @@ class App extends Component {
       );
   }
 
-  componentWillMount() {}
+  componentWillMount() {
+    this.getHeadLineNews();
+  }
 
   componentDidMount() {
     this.getFinancialNews();
-    this.getHeadLineNews();
   }
 
   render() {
@@ -97,7 +101,7 @@ class App extends Component {
       <div>
         {/*<Header />*/}
         <SearchNewsBar />
-        <HeadLine mainHeadLine = {this.state.headLines}/>
+        <HeadLine headLine = {this.state.topHeadLine}/>
         {headLines.map(headLines => (
           <div>
             <h3 key={headLines.title}>{headLines.title}</h3>
