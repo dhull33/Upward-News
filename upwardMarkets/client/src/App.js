@@ -12,7 +12,7 @@ const fetch = window.fetch;
 class App extends Component {
   constructor() {
     super();
-    this.newsAPIKey = "32fafd1455b44c1dbfb0924c66fc1206";
+    this.newsAPIKey = process.env.REACT_APP_NEWS_API_KEY
     this.state = {
       error: null,
       isLoaded: false,
