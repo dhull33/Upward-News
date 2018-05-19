@@ -5,7 +5,7 @@ import SearchNewsBar from "./components/searchBar"
 import Header from "./components/header";
 import HeadLine from "./components/headLine"
 import { Button } from "reactstrap"
-import getMainHeadLine from './utils/getHeadLineNews'
+// import getMainHeadLine from './utils/getHeadLineNews'
 import MarketNews from './components/MarketNews'
 
 const fetch = window.fetch;
@@ -41,7 +41,7 @@ class App extends Component {
             {
               isLoaded: true,
               headLines: data.articles,
-              topHeadLine: data.articles[0]
+              topHeadLine: data.articles[3]
             },
             function() {
               console.log(this.state);
