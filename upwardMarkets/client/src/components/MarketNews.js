@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import MarketItem from './MarketItem'
+import {Container } from 'reactstrap'
 
 class MarketNews extends Component{
   render(){
@@ -13,9 +14,10 @@ class MarketNews extends Component{
       })
     }
     return(
-      <div>
+      <Container>
         {marketItems}
-      </div>
+      </Container>
+
     )
   }
 
