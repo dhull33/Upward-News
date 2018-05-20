@@ -25,7 +25,7 @@ class SearchNewsBar extends Component {
           <span>
             <Input type='searchNews' name='searchNews'  placeholder='Search for News'/>
           </span>
-          <Button>Submit</Button>
+          <Button size='sm'>Submit</Button>
         </Navbar>
 
       </div>

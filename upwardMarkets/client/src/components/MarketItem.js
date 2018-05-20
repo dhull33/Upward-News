@@ -8,8 +8,12 @@ class MarketItem extends Component{
         <CardImg top width='25%' height='10%' src={this.props.marketItem.urlToImage} alt='News Image' />
         <CardBody>
           <CardTitle>{this.props.marketItem.title}</CardTitle>
-          <CardText>{this.props.marketItem.description}</CardText>
-          <a href={this.props.marketItem.url}>Source</a>
+          <a href={this.props.marketItem.url}>
+            <CardText>
+              {this.props.marketItem.description}
+            </CardText>
+          </a>
+          {/*<a href={this.props.marketItem.url}>Source</a>*/}
         </CardBody>
       </Card>
     )
