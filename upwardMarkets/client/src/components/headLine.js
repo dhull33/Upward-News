@@ -11,14 +11,16 @@ class HeadLine extends Component {
         <Row>
           <Col lg='auto'>
             <Media>
-              <Media top object className='resizeHeadLine' src={this.props.headLine.urlToImage} alt="Headline News"/>
+            <Media left>
+              <Media object className='resizeHeadLine' src={this.props.headLine.urlToImage} alt="Headline News"/>
             </Media>
-            <Media bottom body>
+            <Media right body>
               <Media heading className='Heading'>
                 {this.props.headLine.title}
               </Media>
               <div className='dottedLine'></div>
               <p>{this.props.headLine.description}</p>
+            </Media>
             </Media>
           </Col>
         </Row>

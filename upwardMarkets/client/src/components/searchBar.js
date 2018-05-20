@@ -1,5 +1,18 @@
 import React, { Component } from 'react'
-import { Button, Input, Navbar, NavbarBrand } from 'reactstrap'
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  Input,
+  Button} from 'reactstrap'
 
 class SearchNewsBar extends Component {
   constructor(props) {
@@ -12,25 +25,49 @@ class SearchNewsBar extends Component {
 
   toggleNavbar(){
     this.setState({
-      collapsed: !this.state.collapsed
+      collapsed: this.state.collapsed
     })
   }
 
 
-  render () {
+  render() {
     return (
       <div>
-        <Navbar expand='md' className='SearchNews' >
-          <NavbarBrand href='/'><h1>Upward Markets</h1></NavbarBrand>
-          <span>
-            <Input type='searchNews' name='searchNews'  placeholder='Search for News'/>
-          </span>
-          <Button size='sm'>Submit</Button>
+        <Navbar color="light" light expand="md">
+          <NavbarBrand href="/"><b>UpwardMarkets</b></NavbarBrand>
+          <NavbarToggler onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink href="/components/">Login</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="https://github.com/reactstrap/reactstrap">Sign Up</NavLink>
+              </NavItem>
+              <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  Options
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem>
+                    <Input type='searchNews' name='searchNews'  placeholder='Ticker Symbol'>
+                    </Input>
+                    <Button size='sm' type='submit'>&#x1f50d;</Button>
+                  </DropdownItem>
+                  <DropdownItem>
+                    Option 2
+                  </DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>
+                    Reset
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+            </Nav>
+          </Collapse>
         </Navbar>
-
       </div>
-
-    )
+    );
   }
 }
 
