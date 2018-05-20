@@ -34,7 +34,7 @@ class SearchNewsBar extends Component {
   render() {
     return (
       <div>
-        <Navbar color="faded" light>
+        <Navbar className='fixed-top' color="faded" light>
           <NavbarBrand href="/" className="mr-auto">UpwardMarkets</NavbarBrand>
           <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
           <Collapse isOpen={!this.state.collapsed} navbar>
