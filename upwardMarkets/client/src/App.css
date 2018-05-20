@@ -47,7 +47,8 @@ body {
 }
 
 .cardStyle{
-  
+  display: table-cell;
+  color: black;
 
 }
 

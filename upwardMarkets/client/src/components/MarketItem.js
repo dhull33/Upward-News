@@ -5,10 +5,10 @@ class MarketItem extends Component{
   render(){
     return(
       <Card>
-        <CardImg top width='25%' height='10%' src={this.props.marketItem.urlToImage} alt='News Image' />
+        <CardImg top width='10%' height='10%' src={this.props.marketItem.urlToImage} alt='News Image' />
         <CardBody>
           <CardTitle>{this.props.marketItem.title}</CardTitle>
-          <a href={this.props.marketItem.url}>
+          <a className='cardStyle' href={this.props.marketItem.url} target="_blank">
             <CardText>
               {this.props.marketItem.description}
             </CardText>

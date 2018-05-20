@@ -24,3 +24,5 @@ class MarketNews extends Component{
 }
 
 export default MarketNews
+
+

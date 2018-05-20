@@ -12,7 +12,8 @@ import {
   DropdownMenu,
   DropdownItem,
   Input,
-  Button} from 'reactstrap'
+  Button,
+  Form} from 'reactstrap'
 
 class SearchNewsBar extends Component {
   constructor(props) {
@@ -25,7 +26,7 @@ class SearchNewsBar extends Component {
 
   toggleNavbar(){
     this.setState({
-      collapsed: this.state.collapsed
+      collapsed: !this.state.collapsed
     })
   }
 
@@ -33,36 +34,23 @@ class SearchNewsBar extends Component {
   render() {
     return (
       <div>
-        <Navbar color="light" light expand="md">
-          <NavbarBrand href="/"><b>UpwardMarkets</b></NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
+        <Navbar color="faded" light>
+          <NavbarBrand href="/" className="mr-auto">UpwardMarkets</NavbarBrand>
+          <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
+          <Collapse isOpen={!this.state.collapsed} navbar>
+            <Nav navbar>
               <NavItem>
                 <NavLink href="/components/">Login</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="https://github.com/reactstrap/reactstrap">Sign Up</NavLink>
               </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Options
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>
-                    <Input type='searchNews' name='searchNews'  placeholder='Ticker Symbol'>
-                    </Input>
-                    <Button size='sm' type='submit'>&#x1f50d;</Button>
-                  </DropdownItem>
-                  <DropdownItem>
-                    Option 2
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    Reset
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
+              <NavItem>
+              <Form className='form-inline'>
+                <Input className='form-control'bsSize='sm' type='searchNews' name='searchNews'  placeholder='Ticker Symbol'/>
+                <Button size='sm' type='submit'>&#x1f50d;</Button>
+              </Form>
+              </NavItem>
             </Nav>
           </Collapse>
         </Navbar>

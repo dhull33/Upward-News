@@ -103,7 +103,7 @@ class App extends Component {
         {/*<Header />*/}
         <SearchNewsBar />
         <Header/>
-        <HeadLine headLine = {this.state.topHeadLine}/>
+        {/*<HeadLine headLine = {this.state.topHeadLine}/>*/}
         <MarketNews markNews = {this.state.headLines} />
       </div>
     );
