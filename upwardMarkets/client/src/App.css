@@ -22,9 +22,7 @@ body {
 }
 
 .SearchNews{
-  display: flex;
-  justify-content: flex-end !important;
-  text-align: center;
+  width: 150px;
 }
 
 .upwardMarks{

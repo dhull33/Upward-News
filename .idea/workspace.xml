@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7722534-c0bb-4fd6-bdc4-b843a7bfd9e8" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upwardMarkets/client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/upwardMarkets/client/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/upwardMarkets/client/src/components/searchBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/upwardMarkets/client/src/components/searchBar.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -16,15 +18,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.63680893">
+    <splitter split-orientation="horizontal" split-proportion="0.6559524">
       <split-first>
         <splitter split-orientation="horizontal" split-proportion="0.5214521">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file leaf-file-name="headLine.js" pinned="false" current-in-tab="false">
+              <file leaf-file-name="headLine.js" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/upwardMarkets/client/src/components/headLine.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="254">
+                    <state relative-caret-position="185">
                       <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
                     </state>
                   </provider>
@@ -33,7 +35,7 @@
               <file leaf-file-name="header.js" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/upwardMarkets/client/src/components/header.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="299">
+                    <state relative-caret-position="253">
                       <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
                       <folding>
                         <element signature="e#0#25#0" expanded="true" />
@@ -42,14 +44,11 @@
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="searchBar.js" pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/upwardMarkets/client/src/components/searchBar.js">
+              <file leaf-file-name="dataBase.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/upwardMarkets/dataBase.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="187">
-                      <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-                      <folding>
-                        <element signature="e#0#40#0" expanded="true" />
-                      </folding>
+                    <state>
+                      <caret column="56" selection-start-column="56" selection-end-column="56" />
                     </state>
                   </provider>
                 </entry>
@@ -58,16 +57,9 @@
           </split-first>
           <split-second>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file leaf-file-name="MarketNews.js" pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/upwardMarkets/client/src/components/MarketNews.js">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="385">
-                      <caret line="28" selection-start-line="28" selection-end-line="28" />
-                      <folding>
-                        <element signature="e#0#40#0" expanded="true" />
-                      </folding>
-                    </state>
-                  </provider>
+              <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/upwardMarkets/app.js">
+                  <provider selected="true" editor-type-id="text-editor" />
                 </entry>
               </file>
             </leaf>
@@ -79,8 +71,8 @@
           <file leaf-file-name="App.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/upwardMarkets/client/src/App.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1001">
-                  <caret line="48" column="11" lean-forward="true" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
+                <state relative-caret-position="249">
+                  <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
                 </state>
               </provider>
             </entry>
@@ -88,7 +80,7 @@
           <file leaf-file-name="MarketItem.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/upwardMarkets/client/src/components/MarketItem.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="161">
+                <state relative-caret-position="138">
                   <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
                   <folding>
                     <element signature="e#0#40#0" expanded="true" />
@@ -100,8 +92,8 @@
           <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/upwardMarkets/client/src/App.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="401">
-                  <caret line="104" column="17" lean-forward="true" selection-start-line="104" selection-start-column="17" selection-end-line="104" selection-end-column="17" />
+                <state relative-caret-position="2300">
+                  <caret line="104" column="17" selection-start-line="104" selection-start-column="17" selection-end-line="104" selection-end-column="17" />
                   <folding>
                     <element signature="e#83#101#0" expanded="true" />
                   </folding>
@@ -154,11 +146,12 @@
         <option value="$PROJECT_DIR$/upwardMarkets/client/src/components/marketItems.js" />
         <option value="$PROJECT_DIR$/upwardMarkets/client/src/components/marketNews.js" />
         <option value="$PROJECT_DIR$/upwardMarkets/client/src/components/headLine.js" />
-        <option value="$PROJECT_DIR$/upwardMarkets/client/src/App.css" />
         <option value="$PROJECT_DIR$/upwardMarkets/client/src/components/MarketNews.js" />
         <option value="$PROJECT_DIR$/upwardMarkets/client/src/App.js" />
         <option value="$PROJECT_DIR$/upwardMarkets/client/src/components/MarketItem.js" />
+        <option value="$PROJECT_DIR$/upwardMarkets/client/src/App.css" />
         <option value="$PROJECT_DIR$/upwardMarkets/client/src/components/searchBar.js" />
+        <option value="$PROJECT_DIR$/upwardMarkets/dataBase.js" />
       </list>
     </option>
   </component>
@@ -186,10 +179,10 @@
       <path value="$PROJECT_DIR$/upwardMarkets/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="2293" />
-    <option name="y" value="99" />
-    <option name="width" value="1707" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="797" />
+    <option name="y" value="-1057" />
+    <option name="width" value="1920" />
     <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -200,7 +193,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -212,27 +204,6 @@
               <item name="upwardnews" type="b2602c69:ProjectViewProjectNode" />
               <item name="upwardnews" type="462c0819:PsiDirectoryNode" />
               <item name="upwardMarkets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="upwardnews" type="b2602c69:ProjectViewProjectNode" />
-              <item name="upwardnews" type="462c0819:PsiDirectoryNode" />
-              <item name="upwardMarkets" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="upwardnews" type="b2602c69:ProjectViewProjectNode" />
-              <item name="upwardnews" type="462c0819:PsiDirectoryNode" />
-              <item name="upwardMarkets" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="upwardnews" type="b2602c69:ProjectViewProjectNode" />
-              <item name="upwardnews" type="462c0819:PsiDirectoryNode" />
-              <item name="upwardMarkets" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="upwardnews" type="b2602c69:ProjectViewProjectNode" />
@@ -260,11 +231,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="add_unversioned_files" value="$PROJECT_DIR$/upwardMarkets/client/.env&#10;true" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/upwardMarkets/client/src/changes.diff&#10;/Users/davidhull/upwardnews/upwardMarkets/client/.env&#10;true" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -328,12 +300,13 @@
       <workItem from="1526652704932" duration="13171000" />
       <workItem from="1526775526556" duration="3029000" />
       <workItem from="1526833881905" duration="5450000" />
-      <workItem from="1526844142688" duration="3375000" />
+      <workItem from="1526844142688" duration="4326000" />
+      <workItem from="1526912648858" duration="3928000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78324000" />
+    <option name="totallyTimeSpent" value="83203000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -345,28 +318,28 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="2293" y="99" width="1707" height="1057" extended-state="0" />
+    <frame x="797" y="-1057" width="1920" height="1057" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="11" weight="0.32952183" />
-      <window_info id="DB Browser" order="1" />
-      <window_info anchor="right" id="Git Scope" order="5" side_tool="true" />
+      <window_info anchor="right" id="DB Browser" order="1" visible="true" weight="0.15671642" />
+      <window_info anchor="right" id="Git Scope" order="6" side_tool="true" />
       <window_info anchor="bottom" id="DB Execution Console" order="1" />
-      <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.50146914" side_tool="true" weight="0.28755364" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.32848233" />
+      <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.5017857" side_tool="true" weight="0.30098146" />
       <window_info anchor="bottom" id="Version Control" order="0" sideWeight="0.49971214" weight="0.32824427" />
       <window_info id="npm" order="0" sideWeight="0.50054526" side_tool="true" weight="0.08635394" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="4" sideWeight="0.49853086" visible="true" weight="0.36205018" />
-      <window_info content_ui="combo" id="Project" order="3" sideWeight="0.49945474" visible="true" weight="0.116656646" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.32848233" />
+      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49821427" visible="true" weight="0.30098146" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49945474" visible="true" weight="0.104477614" />
       <window_info anchor="bottom" id="Reviews" order="13" weight="0.73388773" />
       <window_info anchor="bottom" id="Docker" order="2" show_stripe_button="false" />
-      <window_info anchor="right" id="JSON Utils" order="1" />
-      <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="News Feed" order="6" />
+      <window_info anchor="right" id="JSON Utils" order="2" weight="0.32995737" />
+      <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="News Feed" order="7" weight="0.32995737" />
+      <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
-      <window_info anchor="right" id="Commander" order="2" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="5" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="3" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="4" weight="0.25" />
       <window_info anchor="right" id="SvgViewer" order="0" />
       <window_info active="true" anchor="bottom" id="Code Review" order="12" visible="true" weight="0.32832617" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.3293348" />
@@ -375,32 +348,32 @@
       <window_info anchor="bottom" id="Message" order="5" />
     </layout>
     <layout-to-restore>
+      <window_info anchor="bottom" id="Version Control" order="0" sideWeight="0.49971214" weight="0.32824427" />
       <window_info anchor="bottom" id="Reviews" order="13" weight="0.73388773" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
       <window_info anchor="right" id="Git Scope" order="5" side_tool="true" />
       <window_info id="npm" order="0" sideWeight="0.50054526" side_tool="true" weight="0.08635394" />
       <window_info anchor="bottom" id="Run" order="7" weight="0.32848233" />
       <window_info anchor="bottom" id="Docker" order="2" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="3" sideWeight="0.49945474" weight="0.29848868" />
       <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="DB Execution Console" order="1" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Code Review" order="12" visible="true" weight="0.32832617" />
-      <window_info anchor="right" id="SvgViewer" order="0" />
       <window_info anchor="bottom" id="TODO" order="11" weight="0.32952183" />
+      <window_info anchor="right" id="SvgViewer" order="0" />
+      <window_info active="true" anchor="bottom" id="Code Review" order="12" visible="true" weight="0.32832617" />
       <window_info id="DB Browser" order="1" />
-      <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.3293348" />
       <window_info anchor="right" id="News Feed" order="6" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
       <window_info active="true" anchor="bottom" id="Terminal" order="4" sideWeight="0.4984747" visible="true" weight="0.28755364" />
       <window_info anchor="right" id="JSON Utils" order="1" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="0" sideWeight="0.49971214" weight="0.32824427" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.50152534" side_tool="true" weight="0.27858627" />
+      <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="right" id="Commander" order="2" weight="0.4" />
-      <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -434,27 +407,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/upwardMarkets/client/src/App.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/upwardMarkets/client/src/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/upwardMarkets/client/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="25" selection-start-column="25" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/upwardMarkets/client/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1863">
@@ -633,13 +585,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/local_history.patch" />
-    <entry file="file://$PROJECT_DIR$/upwardMarkets/client/src/changes.diff">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/upwardMarkets/client/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="344">
@@ -683,18 +628,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/upwardMarkets/client/src/store/actions.js" />
-    <entry file="file://$PROJECT_DIR$/upwardMarkets/app.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/upwardMarkets/client/src/index.css">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/upwardMarkets/client/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="10" selection-start-column="10" selection-end-column="10" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/upwardMarkets/client/src/utils/getHeadLineNews.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -710,16 +645,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/upwardMarkets/client/src/components/headLine.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/upwardMarkets/client/src/components/header.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
+        <state relative-caret-position="253">
           <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
@@ -727,20 +655,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/upwardMarkets/client/src/components/MarketNews.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/upwardMarkets/client/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="104" column="17" lean-forward="true" selection-start-line="104" selection-start-column="17" selection-end-line="104" selection-end-column="17" />
+        <state relative-caret-position="2300">
+          <caret line="104" column="17" selection-start-line="104" selection-start-column="17" selection-end-line="104" selection-end-column="17" />
           <folding>
             <element signature="e#83#101#0" expanded="true" />
           </folding>
@@ -749,8 +667,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/upwardMarkets/client/src/components/MarketItem.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
+        <state relative-caret-position="138">
           <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upwardMarkets/client/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="10" selection-start-column="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upwardMarkets/client/src/changes.diff">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///System/Library/Security/authorization.plist">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6713" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upwardMarkets/client/src/components/MarketNews.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
@@ -759,18 +706,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/upwardMarkets/client/src/App.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1001">
-          <caret line="48" column="11" lean-forward="true" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
+        <state relative-caret-position="249">
+          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="db://[upwardmarkets]tables/public/amex">
+      <provider selected="true" editor-type-id="1.DATA">
+        <state row-count="0" readonly="false">
+          <columns>
+            <column name="symbol" position="0" visible="true" />
+            <column name="name" position="1" visible="true" />
+            <column name="ipo_year" position="2" visible="true" />
+            <column name="sector" position="3" visible="true" />
+            <column name="industry" position="4" visible="true" />
+          </columns>
+          <sorting />
+          <content-types />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/upwardMarkets/client/src/components/searchBar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        <state relative-caret-position="-360">
+          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upwardMarkets/dataBase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="56" selection-start-column="56" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upwardMarkets/app.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upwardMarkets/client/src/components/headLine.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
         </state>
       </provider>
     </entry>

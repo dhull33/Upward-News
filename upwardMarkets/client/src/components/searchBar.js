@@ -13,7 +13,8 @@ import {
   DropdownItem,
   Input,
   Button,
-  Form} from 'reactstrap'
+  Form,
+  FormGroup} from 'reactstrap'
 
 class SearchNewsBar extends Component {
   constructor(props) {
@@ -46,8 +47,10 @@ class SearchNewsBar extends Component {
                 <NavLink href="https://github.com/reactstrap/reactstrap">Sign Up</NavLink>
               </NavItem>
               <NavItem>
-              <Form className='form-inline'>
-                <Input className='form-control'bsSize='sm' type='searchNews' name='searchNews'  placeholder='Ticker Symbol'/>
+              <Form  inline className='SearchNews'>
+                <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
+                  <Input className='form-control' bsSize='sm' type='searchNews' name='searchNews'  placeholder='Ticker Symbol'/>
+                </FormGroup>
                 <Button size='sm' type='submit'>&#x1f50d;</Button>
               </Form>
               </NavItem>
