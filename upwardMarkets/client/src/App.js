@@ -19,7 +19,8 @@ class App extends Component {
       isLoaded: false,
       headLines: [],
       marketNews: [],
-      topHeadLine: []
+      topHeadLine: [],
+      nasdaqTicker: []
     };
   }
 
@@ -80,6 +81,20 @@ class App extends Component {
         }
       );
   }
+  getNasdaqTickerSymbols() {
+    fetch('/auto').then(res => {
+    this.setState({
+      nasdaqTicker: res.json()
+    }), () => {
+    console.log(this.state)}
+    })
+      .catch(error => {
+        this.setState({
+          isLoaded: true,
+          error
+        });
+      })
+}
 
   componentWillMount() {
     this.getHeadLineNews();
@@ -87,8 +102,8 @@ class App extends Component {
 
   componentDidMount() {
     this.getFinancialNews();
+    this.getNasdaqTickerSymbols()
   }
-
   render() {
     const { error, isLoaded, headLines } = this.state;
     if (error) {

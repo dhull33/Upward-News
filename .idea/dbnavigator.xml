@@ -25,7 +25,7 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="21c5bd3a-70b0-4601-9ffc-06d2c12dee64">
-        <schema name="public" object-types="column, constraint, function, index, sequence, table, dataset trigger, view" />
+        <schema name="public" object-types="table" />
       </connection>
     </loaded-nodes>
   </component>
@@ -35,7 +35,9 @@
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="21c5bd3a-70b0-4601-9ffc-06d2c12dee64" />
+    <connection id="21c5bd3a-70b0-4601-9ffc-06d2c12dee64">
+      <session name="Session 1" id="334ca729-07a8-4731-9e18-75670a3a423e" />
+    </connection>
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-list connection-id="21c5bd3a-70b0-4601-9ffc-06d2c12dee64" dataset="public.amex" active-filter-id="EMPTY_FILTER" />
@@ -104,10 +106,10 @@
           <restore-workspace value="true" />
           <restore-workspace-deep value="true" />
           <environment-type value="default" />
-          <idle-time-to-disconnect value="30" />
-          <idle-time-to-disconnect-pool value="5" />
-          <password-expiry-time value="10" />
-          <max-connection-pool-size value="7" />
+          <idle-time-to-disconnect value="60" />
+          <idle-time-to-disconnect-pool value="30" />
+          <password-expiry-time value="60" />
+          <max-connection-pool-size value="10" />
           <alternative-statement-delimiter value="" />
         </details>
         <object-filters hide-empty-schemas="false">
