@@ -46,7 +46,7 @@ function getNyseTicker(req, res){
 }
 
 function getAmexTicker(req, res){
-  db.many('SELECT symbol FROM nasdaq')
+  db.many('SELECT symbol FROM amex')
     .then(data => {
       res.status(200)
         .json({

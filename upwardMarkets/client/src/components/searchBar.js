@@ -35,7 +35,7 @@ class SearchNewsBar extends Component {
   render() {
     return (
       <div>
-        <Navbar className='fixed-top' color="faded" light>
+        <Navbar className='fixed-top whiteBackground' light>
           <NavbarBrand href="/" className="mr-auto">UpwardMarkets</NavbarBrand>
           <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
           <Collapse isOpen={!this.state.collapsed} navbar>
@@ -50,8 +50,9 @@ class SearchNewsBar extends Component {
               <Form  inline className='SearchNews'>
                 <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
                   <Input className='form-control' bsSize='sm' type='searchNews' name='searchNews'  placeholder='Ticker Symbol'/>
-                </FormGroup>
+
                 <Button size='sm' type='submit'>&#x1f50d;</Button>
+                </FormGroup>
               </Form>
               </NavItem>
             </Nav>

@@ -22,6 +22,7 @@ class App extends Component {
       topHeadLine: [],
       nasdaqTicker: [],
       nyseTicker: [],
+      amexTicker: []
     };
   }
 
@@ -83,22 +84,45 @@ class App extends Component {
       );
   }
 
-  componentWillMount() {
+  getNasdaqTicker(){
+    fetch('/nasdaq')
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          nasdaqTicker: data.data,
+        })
+      })
+      .catch(err => console.log(err))
+  }
+
+  getNyseTicker(){
+    fetch('/nyse')
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          nyseTicker: data.data,
+        })
+      })
+      .catch(err => console.log(err))
+  }
+
+  getAmexTicker(){
+    fetch('/amex')
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          amexTicker: data.data,
+        })
+      })
+      .catch(err => console.log(err))
   }
 
   componentDidMount() {
-    this.getHeadLineNews();
-    this.getFinancialNews();
-
-    fetch('/auto')
-      .then(res => res.json())
-      .then(data => {
-      this.setState({
-        nasdaqTicker: data.data,
-        nyseTicker: []
-      })
-    })
-      .catch(err => console.log(err))
+    this.getHeadLineNews()
+    this.getFinancialNews()
+    this.getNasdaqTicker()
+    this.getNyseTicker()
+    this.getAmexTicker()
   }
 
 

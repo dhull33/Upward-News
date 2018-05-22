@@ -6,7 +6,9 @@ const logger = require('morgan');
 
 //const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-const sendToAuto = require('./routes/sendToAutoComplete')
+const getNasdaq = require('./routes/getNasdaqTicker')
+const getNyse  = require('./routes/getNyseTicker')
+const getAmex = require('./routes/getAmexTicker')
 
 const app = express();
 
@@ -20,7 +22,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/auto', sendToAuto);
+app.use('/nasdaq', getNasdaq);
+app.use('/nyse', getNyse);
+app.use('/amex', getAmex);
 app.use('/users', usersRouter);
 
 
