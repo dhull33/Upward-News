@@ -15,21 +15,54 @@ const config = {
 
 const db = pgp(config)
 
-function getNasdaqTicker(req, res, next){
+function getNasdaqTicker(req, res){
   db.many('SELECT symbol FROM nasdaq')
     .then(data => {
       res.status(200)
         .json({
           status: 'success',
           data: data,
-          message: 'Retrieved all ticker symbols'
+          message: 'Retrieved NASDAQ ticker symbols'
         })
     })
     .catch(error => {
-      return next(error)
+      return error
     })
 }
 
-module.exports = {
-  getNasdaqTicker: getNasdaqTicker
+function getNyseTicker(req, res){
+  db.many('SELECT symbol FROM nyse')
+    .then(data => {
+      res.status(200)
+        .json({
+          status: 'success',
+          data: data,
+          message: 'Retrieved NYSE ticker symbols'
+        })
+    })
+    .catch(error => {
+      return error
+    })
 }
+
+function getAmexTicker(req, res){
+  db.many('SELECT symbol FROM nasdaq')
+    .then(data => {
+      res.status(200)
+        .json({
+          status: 'success',
+          data: data,
+          message: 'Retrieved Amex symbols'
+        })
+    })
+    .catch(error => {
+      return error
+    })
+}
+
+
+module.exports = {
+  getNasdaqTicker: getNasdaqTicker,
+  getNyseTicker: getNyseTicker,
+  getAmexTicker: getAmexTicker
+ }

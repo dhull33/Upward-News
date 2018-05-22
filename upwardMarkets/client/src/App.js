@@ -20,7 +20,8 @@ class App extends Component {
       headLines: [],
       marketNews: [],
       topHeadLine: [],
-      nasdaqTicker: []
+      nasdaqTicker: [],
+      nyseTicker: [],
     };
   }
 
@@ -89,11 +90,12 @@ class App extends Component {
     this.getHeadLineNews();
     this.getFinancialNews();
 
-    fetch('/')
+    fetch('/auto')
       .then(res => res.json())
       .then(data => {
       this.setState({
-        nasdaqTicker: data.message
+        nasdaqTicker: data.data,
+        nyseTicker: []
       })
     })
       .catch(err => console.log(err))
