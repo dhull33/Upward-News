@@ -81,29 +81,25 @@ class App extends Component {
         }
       );
   }
-  getNasdaqTickerSymbols() {
-    fetch('/auto').then(res => {
-    this.setState({
-      nasdaqTicker: res.json()
-    }), () => {
-    console.log(this.state)}
-    })
-      .catch(error => {
-        this.setState({
-          isLoaded: true,
-          error
-        });
-      })
-}
 
   componentWillMount() {
-    this.getHeadLineNews();
   }
 
   componentDidMount() {
+    this.getHeadLineNews();
     this.getFinancialNews();
-    this.getNasdaqTickerSymbols()
+
+    fetch('/')
+      .then(res => res.json())
+      .then(data => {
+      this.setState({
+        nasdaqTicker: data.message
+      })
+    })
+      .catch(err => console.log(err))
   }
+
+
   render() {
     const { error, isLoaded, headLines } = this.state;
     if (error) {
