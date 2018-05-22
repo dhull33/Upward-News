@@ -9,6 +9,7 @@ const usersRouter = require('./routes/users');
 const getNasdaq = require('./routes/getNasdaqTicker')
 const getNyse  = require('./routes/getNyseTicker')
 const getAmex = require('./routes/getAmexTicker')
+const getAll = require('./routes/getAllTickers')
 
 const app = express();
 
@@ -26,6 +27,7 @@ app.use('/nasdaq', getNasdaq);
 app.use('/nyse', getNyse);
 app.use('/amex', getAmex);
 app.use('/users', usersRouter);
+app.use('/all', getAll);
 
 
 // catch 404 and forward to error handler

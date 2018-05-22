@@ -8,6 +8,8 @@ import { Button } from "reactstrap"
 // import getMainHeadLine from './utils/getHeadLineNews'
 import MarketNews from './components/MarketNews'
 
+
+
 const fetch = window.fetch;
 
 class App extends Component {
@@ -22,7 +24,8 @@ class App extends Component {
       topHeadLine: [],
       nasdaqTicker: [],
       nyseTicker: [],
-      amexTicker: []
+      amexTicker: [],
+      allTickers: []
     };
   }
 
@@ -117,12 +120,24 @@ class App extends Component {
       .catch(err => console.log(err))
   }
 
+  getAllTickers(){
+    fetch('/all')
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          allTickers: data.data,
+        })
+      })
+      .catch(err => console.log(err))
+  }
+
   componentDidMount() {
     this.getHeadLineNews()
     this.getFinancialNews()
     this.getNasdaqTicker()
     this.getNyseTicker()
     this.getAmexTicker()
+    this.getAllTickers()
   }
 
 
@@ -138,7 +153,7 @@ class App extends Component {
     return (
       <div>
         {/*<Header />*/}
-        <SearchNewsBar />
+        <SearchNewsBar items={this.props.allTickers} />
         <Header/>
         {/*<HeadLine headLine = {this.state.topHeadLine}/>*/}
         <MarketNews markNews = {this.state.headLines} />

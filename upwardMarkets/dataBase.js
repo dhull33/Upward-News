@@ -60,9 +60,28 @@ function getAmexTicker(req, res){
     })
 }
 
+function getAllTickers(req, res){
+  db.many('SELECT symbol FROM all_tickers')
+    .then(data => {
+      res.status(200)
+        .json({
+          status: 'success',
+          data: data,
+          message: 'Retrieved ALL Data'
+        })
+    })
+    .catch(error => {
+      return error
+    })
+}
 
-module.exports = {
-  getNasdaqTicker: getNasdaqTicker,
-  getNyseTicker: getNyseTicker,
-  getAmexTicker: getAmexTicker
- }
+
+// module.exports = {
+//   getNasdaqTicker: getNasdaqTicker,
+//   getNyseTicker: getNyseTicker,
+//   getAmexTicker: getAmexTicker,
+//   getAllTickers: getAllTickers,
+//
+//  }
+
+module.exports = db
