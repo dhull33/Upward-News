@@ -15,7 +15,7 @@ const config = {
 
 const db = pgp(config)
 
-function getNasdaqTicker(req, res){
+function getNasdaqTicker(req, res, next){
   db.many('SELECT symbol FROM nasdaq')
     .then(data => {
       res.status(200)
@@ -26,11 +26,11 @@ function getNasdaqTicker(req, res){
         })
     })
     .catch(error => {
-      return error
+      return next(error)
     })
 }
 
-function getNyseTicker(req, res){
+function getNyseTicker(req, res, next){
   db.many('SELECT symbol FROM nyse')
     .then(data => {
       res.status(200)
@@ -41,11 +41,11 @@ function getNyseTicker(req, res){
         })
     })
     .catch(error => {
-      return error
+      return next(error)
     })
 }
 
-function getAmexTicker(req, res){
+function getAmexTicker(req, res, next){
   db.many('SELECT symbol FROM amex')
     .then(data => {
       res.status(200)
@@ -56,11 +56,11 @@ function getAmexTicker(req, res){
         })
     })
     .catch(error => {
-      return error
+      return next(error)
     })
 }
 
-function getAllTickers(req, res){
+function getAllTickers(req, res, next){
   db.many('SELECT symbol FROM all_tickers')
     .then(data => {
       res.status(200)
@@ -71,17 +71,16 @@ function getAllTickers(req, res){
         })
     })
     .catch(error => {
-      return error
+      return next(error)
     })
 }
 
 
-// module.exports = {
-//   getNasdaqTicker: getNasdaqTicker,
-//   getNyseTicker: getNyseTicker,
-//   getAmexTicker: getAmexTicker,
-//   getAllTickers: getAllTickers,
-//
-//  }
+ module.exports = {
+   getNasdaqTicker: getNasdaqTicker,
+   getNyseTicker: getNyseTicker,
+   getAmexTicker: getAmexTicker,
+   getAllTickers: getAllTickers
 
-module.exports = db
+  }
+

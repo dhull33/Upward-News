@@ -127,7 +127,7 @@ class App extends Component {
         this.setState({
           allTickers: data.data,
         })
-      })
+      }, ()=> {console.log(this.state)})
       .catch(err => console.log(err))
   }
 
@@ -153,7 +153,7 @@ class App extends Component {
     return (
       <div>
         {/*<Header />*/}
-        <SearchNewsBar items={this.props.allTickers} />
+        <SearchNewsBar tickers={this.state.allTickers} />
         <Header/>
         {/*<HeadLine headLine = {this.state.topHeadLine}/>*/}
         <MarketNews markNews = {this.state.headLines} />
