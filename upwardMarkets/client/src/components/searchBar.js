@@ -6,16 +6,15 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  Input,
-  Button,
-  Form,
-  FormGroup} from 'reactstrap'
+  Button} from 'reactstrap'
 
 import AutoComplete from './autoComplete'
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
+import TickerPage from './tickerPage/stockPage'
 
 class SearchNewsBar extends Component {
   constructor(props) {
@@ -45,11 +44,15 @@ class SearchNewsBar extends Component {
           <NavbarBrand href="/" className="mr-auto">UpwardMarkets</NavbarBrand>
           <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
           <Collapse isOpen={!this.state.collapsed} navbar>
+
             <Nav>
               <NavItem>
                 <AutoComplete tickers={this.props.tickers}/>
+                <Button size='sm' type='submit'><Link to='/ticker'>&#x1f50d;</Link></Button>
+                {/*<Route exact path="/ticker" component={TickerPage}/>*/}
               </NavItem>
             </Nav>
+
           </Collapse>
         </Navbar>
       </div>

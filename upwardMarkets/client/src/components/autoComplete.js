@@ -63,16 +63,23 @@ class AutoComplete extends Component {
         }
         value={ value }
         onChange={ (...args) => this.onChange(...args) }
-        // onSelect={value => this.setState({ value })}
+        onSelect={value => this.setState({ value })}
       />
     )
   }
 }
 
 class Item extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      key: Math.floor(Math.random() * 8000)
+    }
+  }
   render () {
+
     return (
-      <div style={{ background: this.props.active ? 'lightgray' : 'white' }}>
+      <div key = {this.state.key} style={{ background: this.props.active ? 'lightgray' : 'white' }}>
         { this.props.children }
       </div>
     );

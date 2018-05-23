@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-// import { connect } from "react-redux";
 import "./App.css"
 import SearchNewsBar from "./components/searchBar"
 import Header from "./components/header";
@@ -7,7 +6,14 @@ import HeadLine from "./components/headLine"
 import { Button } from "reactstrap"
 // import getMainHeadLine from './utils/getHeadLineNews'
 import MarketNews from './components/MarketNews'
-
+import AutoComplete from './components/autoComplete'
+import TickerPage from './components/tickerPage/stockPage'
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  withRouter
+} from 'react-router-dom'
 
 
 const fetch = window.fetch;
@@ -131,6 +137,10 @@ class App extends Component {
       .catch(err => console.log(err))
   }
 
+  handleClick = () =>{
+    this.props.history.push('/ticker')
+  }
+
   componentDidMount() {
     this.getHeadLineNews()
     this.getFinancialNews()
@@ -139,6 +149,8 @@ class App extends Component {
     this.getAmexTicker()
     this.getAllTickers()
   }
+
+
 
 
   render() {
@@ -162,4 +174,6 @@ class App extends Component {
   }
 }
 
-export default App;
+
+
+export default withRouter(App);
