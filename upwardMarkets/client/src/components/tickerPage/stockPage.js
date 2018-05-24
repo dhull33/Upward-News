@@ -12,7 +12,7 @@ class TickerPage extends Component{
   }
 
   getTickerData(){
-    console.log(this.state)
+    console.log(this.props.value)
   }
 
     componentDidMount(){

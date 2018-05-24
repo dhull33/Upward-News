@@ -48,8 +48,8 @@ class SearchNewsBar extends Component {
             <Nav>
               <NavItem>
                 <AutoComplete tickers={this.props.tickers}/>
-                <Button size='sm' type='submit'><Link to='/ticker'>&#x1f50d;</Link></Button>
-                {/*<Route exact path="/ticker" component={TickerPage}/>*/}
+                <Button size='sm'>&#x1f50d;</Button>
+                <Route exact path="/ticker" component={TickerPage}/>
               </NavItem>
             </Nav>
 

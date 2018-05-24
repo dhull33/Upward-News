@@ -12,7 +12,8 @@ import {
   BrowserRouter as Router,
   Route,
   Link,
-  withRouter
+  withRouter,
+  Switch
 } from 'react-router-dom'
 
 
@@ -141,6 +142,8 @@ class App extends Component {
     this.props.history.push('/ticker')
   }
 
+
+
   componentDidMount() {
     this.getHeadLineNews()
     this.getFinancialNews()
@@ -149,8 +152,6 @@ class App extends Component {
     this.getAmexTicker()
     this.getAllTickers()
   }
-
-
 
 
   render() {
@@ -169,6 +170,10 @@ class App extends Component {
         <Header/>
         {/*<HeadLine headLine = {this.state.topHeadLine}/>*/}
         <MarketNews markNews = {this.state.headLines} />
+        {/*<Switch>*/}
+          {/*<Route exact path='/' component={MarketNews}/>*/}
+          {/*<Route path='/ticker' component={TickerPage}/>*/}
+        {/*</Switch>*/}
       </div>
     );
   }
