@@ -2,44 +2,6 @@
 import React, { Component } from 'react'
 import Autocomplete from 'react-autocomplete'
 
-
-// class AutoComplete extends Component {
-//   constructor(props){
-//     super(props)
-//     this.state ={
-//       ticker: 'AAPL',
-//       disabled: false,
-//       searchable: this.props.searchable,
-//       selectValue: 'AAPL',
-//       clearable: true,
-//       rtl: false,
-//     }
-//   }
-//
-//   clearValue(e){
-//     this.select.setInputValue('')
-//   }
-//
-//   updateValue(newValue){
-//     this.setState({
-//       selectValue: newValue
-//     })
-//   }
-//
-//   focusTickerSelect(){
-//     this.select.focus()
-//   }
-//
-// }
-//
-// AutoComplete.defaultProps = {
-//   label: 'Ticker',
-//   searchable: true
-// }
-// export default AutoComplete
-
-
-
 class AutoComplete extends Component {
   constructor(props){
     super(props)
@@ -49,6 +11,7 @@ class AutoComplete extends Component {
   }
   onChange(event, value){
     this.setState({ value });
+    localStorage.setItem('tickerSymbol', value)
   }
 
   render(){
@@ -79,9 +42,12 @@ class Item extends React.Component {
   render () {
 
     return (
-      <div key = {this.state.key} style={{ background: this.props.active ? 'lightgray' : 'white' }}>
-        { this.props.children }
+      <div>
+        <div key = {this.state.key} style={{ background: this.props.active ? 'lightgray' : 'white' }}>
+          { this.props.children }
+        </div>
       </div>
+
     );
   }
 }

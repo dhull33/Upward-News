@@ -22,7 +22,8 @@ class SearchNewsBar extends Component {
     this.toggleNavbar = this.toggleNavbar.bind(this)
     this.state = {
       collapsed: true,
-      items: []
+      items: [],
+
     }
   }
 
@@ -34,6 +35,10 @@ class SearchNewsBar extends Component {
 
   handleSubmit(e){
     e.preventDefault();
+    this.setState({
+      ticker: this.refs.value
+    })
+    console.log(this.state)
   }
 
 
@@ -48,7 +53,9 @@ class SearchNewsBar extends Component {
             <Nav>
               <NavItem>
                 <AutoComplete tickers={this.props.tickers}/>
-                <Button size='sm'>&#x1f50d;</Button>
+                <Link to="/ticker">
+                  <Button size='sm'>&#x1f50d;</Button>
+                </Link>
                 <Route exact path="/ticker" component={TickerPage}/>
               </NavItem>
             </Nav>

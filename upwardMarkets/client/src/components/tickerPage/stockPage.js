@@ -1,29 +1,33 @@
 import React, { Component } from 'react'
 import { Container, Row, Col } from 'reactstrap'
-// import SearchNewsBar from '../searchBar'
+
 
 
 class TickerPage extends Component{
   constructor(props){
     super(props)
     this.state = {
-      symbol: this.props.value
+      symbol: ''
     }
   }
 
   getTickerData(){
-    console.log(this.props.value)
+    const tickerSymbol = localStorage.getItem('tickerSymbol')
+    this.setState({
+      symbol: tickerSymbol
+    })
   }
 
     componentDidMount(){
-    this.getTickerData()
+      this.getTickerData()
     }
 
   render(){
     return (
       <div>
-        {/*<SearchNewsBar />*/}
+
         <Container>
+          <h1>{this.state.symbol} Yoooooo</h1>
         </Container>
         <h1>Hello</h1>
       </div>
