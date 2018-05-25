@@ -43,7 +43,7 @@ class TickerPage extends Component{
             financials: data.financials,
             earnings: data.earnings,
             chart: data.chart,
-            color: 'green'
+            color: ''
           }
         )
       })
@@ -120,7 +120,7 @@ class TickerPage extends Component{
   }
 
   setPercentColor() {
-    const percentChange = parseFloat(this.state.changePercent) * 100
+    const percentChange = parseFloat(this.state.changePercent)
     if (percentChange < 0) {
       this.setState({
         color: 'red'
@@ -132,10 +132,12 @@ class TickerPage extends Component{
       })
     }
   }
+  componentWillMount(){
+    this.setPercentColor()
+  }
 
   componentDidMount(){
     this.getTickerData()
-    this.setPercentColor()
   }
 
   render(){
@@ -171,6 +173,16 @@ class TickerPage extends Component{
             <br/>
             <h6 className='dottedLine'><a className='cardStyle' href={this.state.url4} target="_blank">{this.state.newsHeadline4}</a></h6>
             <br/>
+          </Row>
+          <Row>
+            <Col xs='5'>
+              <h6 className='text-muted'>52 Week High</h6>
+              <p className='dottedLine'>{this.state.week52High}</p>
+            </Col>
+            <Col xs='5'>
+              <h6 className='text-muted'>52 Week Low</h6>
+              <p className='dottedLine'>{this.state.week52Low}</p>
+            </Col>
           </Row>
         </Container>
       </Container>
