@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Container, Row, Col } from 'reactstrap'
-
+import {Line} from 'react-chartjs-2'
 
 
 class TickerPage extends Component{
@@ -47,6 +47,42 @@ class TickerPage extends Component{
           }
         )
       })
+      .then(()=>{
+        const chartState= this.state.chart
+        let closePrice = []
+        for(let i=0; i < chartState.length; i++){
+          closePrice.push(this.state.chart.close)
+        }
+
+        this.setState({
+          data:
+            { labels: [this.state.chart.label],
+             datasets: [
+              {
+                label: 'My First dataset',
+                fill: false,
+                lineTension: 0.1,
+                backgroundColor: 'rgba(75,192,192,0.4)',
+                borderColor: 'rgba(75,192,192,1)',
+                borderCapStyle: 'butt',
+                borderDash: [],
+                borderDashOffset: 0.0,
+                borderJoinStyle: 'miter',
+                pointBorderColor: 'rgba(75,192,192,1)',
+                pointBackgroundColor: '#fff',
+                pointBorderWidth: 1,
+                pointHoverRadius: 5,
+                pointHoverBackgroundColor: 'rgba(75,192,192,1)',
+                pointHoverBorderColor: 'rgba(220,220,220,1)',
+                pointHoverBorderWidth: 2,
+                pointRadius: 1,
+                pointHitRadius: 10,
+                data: closePrice
+              }
+            ]}
+
+        })
+      })
       .then(()=> {
         console.log(this.state)
         sessionStorage.clear()
@@ -91,7 +127,9 @@ class TickerPage extends Component{
             <p className='percentChange' style={{color: this.setPercentColor.bind(this)}}>{this.state.changePercent}%</p>
           </Col>
         </Row>
+        <Line data={this.state.data}/>
       </Container>
+
     )
   }
 }
