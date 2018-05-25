@@ -43,24 +43,31 @@ class TickerPage extends Component{
             financials: data.financials,
             earnings: data.earnings,
             chart: data.chart,
-            color: ''
+            color: 'green'
           }
         )
       })
       .then(()=>{
         const chartState= this.state.chart
         let closePrice = []
+        let labels = []
         for(let i=0; i < chartState.length; i++){
-          closePrice.push(this.state.chart.close)
+          if(this.state.chart[i].high !== -1) {
+            closePrice.push(this.state.chart[i].high)
+          }else{
+            closePrice.push(closePrice[i-1])
+          }
+          labels.push(this.state.chart[i].label)
         }
-
+        console.log(closePrice)
         this.setState({
           data:
-            { labels: [this.state.chart.label],
+            {
+              labels: labels,
              datasets: [
               {
-                label: 'My First dataset',
-                fill: false,
+                label: '1day',
+                fill: true,
                 lineTension: 0.1,
                 backgroundColor: 'rgba(75,192,192,0.4)',
                 borderColor: 'rgba(75,192,192,1)',
@@ -81,6 +88,28 @@ class TickerPage extends Component{
               }
             ]}
 
+        })
+      })
+      .then(()=>{
+        let newsState = this.state.news
+        let newsHeadLine = []
+        let newsUrl = []
+        for(let j =0; j < newsState.length; j ++){
+          newsHeadLine.push(this.state.news[j].headline)
+          newsUrl.push(this.state.news[j].url)
+        }
+        console.log(newsHeadLine)
+        this.setState({
+          newsHeadline0: newsHeadLine[0],
+          newsHeadline1: newsHeadLine[1],
+          newsHeadline2: newsHeadLine[2],
+          newsHeadline3: newsHeadLine[3],
+          newsHeadline4: newsHeadLine[4],
+          url0: newsUrl[0],
+          url1: newsUrl[1],
+          url2: newsUrl[2],
+          url3: newsUrl[3],
+          url4: newsUrl[4],
         })
       })
       .then(()=> {
@@ -124,10 +153,26 @@ class TickerPage extends Component{
             <h1>${this.state.latestPrice}</h1>
           </Col>
           <Col xs='6'>
-            <p className='percentChange' style={{color: this.setPercentColor.bind(this)}}>{this.state.changePercent}%</p>
+            <p className='percentChange' style={{color: this.state.color}}>{this.state.changePercent}%</p>
           </Col>
         </Row>
         <Line data={this.state.data}/>
+        <Container>
+          <Row>
+            <h4 className='dottedLine'>News</h4>
+            <br/>
+            <h6 className='dottedLine'><a className='cardStyle' href={this.state.url0} target="_blank">{this.state.newsHeadline0}</a></h6>
+            <br/>
+            <h6 className='dottedLine'><a className='cardStyle' href={this.state.url1} target="_blank">{this.state.newsHeadline1}</a></h6>
+            <br/>
+            <h6 className='dottedLine'><a className='cardStyle' href={this.state.url2} target="_blank">{this.state.newsHeadline2}</a></h6>
+            <br/>
+            <h6 className='dottedLine'><a className='cardStyle' href={this.state.url3} target="_blank">{this.state.newsHeadline3}</a></h6>
+            <br/>
+            <h6 className='dottedLine'><a className='cardStyle' href={this.state.url4} target="_blank">{this.state.newsHeadline4}</a></h6>
+            <br/>
+          </Row>
+        </Container>
       </Container>
 
     )
