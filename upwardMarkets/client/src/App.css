@@ -47,6 +47,22 @@ body {
 .cardStyle{
   display: table-cell;
   color: black;
+}
+
+.stockPage{
+  margin-top: 3vh;
+}
+.companyName{
+  margin-top: -6px;
+}
+.sector{
+  margin-top: -8px;
+}
+
+p.percentChange{
+  align-content: center;
+  margin-top: 1em;
+  margin-left: 0.5em;
 
 }
 

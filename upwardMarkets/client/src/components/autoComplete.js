@@ -11,7 +11,7 @@ class AutoComplete extends Component {
   }
   onChange(event, value){
     this.setState({ value });
-    localStorage.setItem('tickerSymbol', value)
+
   }
 
   render(){
@@ -26,7 +26,10 @@ class AutoComplete extends Component {
         }
         value={ value }
         onChange={ (...args) => this.onChange(...args) }
-        onSelect={value => this.setState({ value })}
+        onSelect={(value) => {
+          this.setState({ value })
+          sessionStorage.setItem('tickerSymbol', value)
+        }}
       />
     )
   }

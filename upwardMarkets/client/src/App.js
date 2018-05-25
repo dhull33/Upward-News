@@ -70,30 +70,6 @@ class App extends Component {
       );
   }
 
-  getFinancialNews() {
-    fetch("https://api.iextrading.com/1.0/stock/market/news/last/20")
-      .then(res => res.json())
-      .then(
-        data => {
-          this.setState(
-            {
-              isLoaded: true,
-              marketNews: data
-            },
-            function() {
-              console.log(this.state);
-            }
-          );
-        },
-        error => {
-          this.setState({
-            isLoaded: true,
-            error
-          });
-        }
-      );
-  }
-
   getNasdaqTicker(){
     fetch('/nasdaq')
       .then(res => res.json())
@@ -143,10 +119,9 @@ class App extends Component {
   }
 
 
-
   componentDidMount() {
     this.getHeadLineNews()
-    this.getFinancialNews()
+    // this.getFinancialNews()
     this.getNasdaqTicker()
     this.getNyseTicker()
     this.getAmexTicker()
@@ -165,15 +140,9 @@ class App extends Component {
 
     return (
       <div>
-        {/*<Header />*/}
         <SearchNewsBar tickers={this.state.allTickers} />
         <Header/>
-        {/*<HeadLine headLine = {this.state.topHeadLine}/>*/}
         <MarketNews markNews = {this.state.headLines} />
-        {/*<Switch>*/}
-          {/*<Route exact path='/' component={MarketNews}/>*/}
-          {/*<Route path='/ticker' component={TickerPage}/>*/}
-        {/*</Switch>*/}
       </div>
     );
   }
