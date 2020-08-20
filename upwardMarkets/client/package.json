@@ -5,7 +5,7 @@
   "dependencies": {
     "ajv": "^5.5.2",
     "axios": "^0.18.1",
-    "bcrypt": "^2.0.1",
+    "bcrypt": "^5.0.0",
     "bootstrap": "^4.3.1",
     "chart.js": "^2.8.0",
     "deep-extend": "^0.5.1",
